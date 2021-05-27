@@ -1,0 +1,3 @@
+/Users/xiaodi/Documents/Forsbergs/Projects/marczaku-gp20-2021-0524-nim-game-XiaodiW/BinaryConverter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/xiaodi/Documents/Forsbergs/Projects/marczaku-gp20-2021-0524-nim-game-XiaodiW/BinaryConverter/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xiaodi/Documents/Forsbergs/Projects/marczaku-gp20-2021-0524-nim-game-XiaodiW/BinaryConverter/cmake-build-debug/CMakeFiles/BinaryConverter.dir
