@@ -2,10 +2,12 @@
 #include <array>
 #include <iterator>
 #include <algorithm>
+#include <list>
+
 
 using std::cout; using std::endl;
 using std::array; using std::fill;
-using std::string;
+using std::string;using std::list;
 
 int Grid[3][3];
 array<array<int,2>,9> Index;
@@ -95,10 +97,28 @@ void playerTurn(){
     Grid[Index[chosen-1][0]][Index[chosen-1][1]] = 1;
 }
 
+void noneSmartAI(){
+    cout << "Now, it is AI's turn" << endl;
+    printGrid(false);
+    list<array<int, 2>> validList;
+    for (int i = 0; i < 9; ++i)
+        if (Index[i][0] == -1) {
+            array<int, 2> element = {Index[i][0], Index[i][1]};
+            validList.push_front(element);
+        }
+    int chosen = rand() % validList.size();
+    Grid[Index[chosen][0]][Index[chosen][1]] = 4;
+}
+
 int main() {
     cout << "Hello, World!" << endl;
     while (winConditionCheck() == 0) {
         playerTurn();
+        cout << "Result:" << "\n" << s << endl;
+        printGrid(true);
+        cout << s << endl;
+        if(winConditionCheck() != 0) break;
+        noneSmartAI();
         cout << "Result:" << "\n" << s << endl;
         printGrid(true);
         cout << s << endl;
